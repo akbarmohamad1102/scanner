@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="lingkaran_">#4c8087</color>
+    <color name="lingkaran_scan">#139599</color>
+    <color name="lingkaran_lokasi">#ff9340</color>
+    <color name="lingkaran_simpan">#4480b1</color>
+    <color name="biruAwan">#125688</color>
+    <color name="windowBackground">#FFFFFF</color>
+    <color name="navigationBarColor">#000000</color>
+    <color name="putih">#c8e8ff</color>
+    <color name="lingkaran_spbu">#464343</color>
+    <color name="lingkaran_transportasi">#8a638e</color>
+    <color name="lingkaran_kerajinan">#e1d612</color>
+    <color name="orange">#FFA500 </color>
+    <color name="green">#00FF00</color>
+</resources>

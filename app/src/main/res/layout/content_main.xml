@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/activity_main">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginTop="40dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/resultText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:hint="@string/qr_barcode"
+                    android:textAlignment="center"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:id="@+id/linear_layout"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp">
+
+                    <!-- Text Label -->
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Model:"
+                        android:layout_marginBottom="5dp"
+                        />
+
+                    <!-- Spinner Element -->
+                    <Spinner
+                        android:id="@+id/spnModel"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:prompt="@string/spinner"
+                        tools:ignore="HardcodedText" />
+                </LinearLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:hintTextAppearance="@style/MyHintText"
+                    android:layout_marginTop="20dp">
+                    <EditText
+                        android:id="@+id/etTipe"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp"
+                        android:textSize="14sp"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:inputType="textCapWords"
+                        android:hint="@string/tipe" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/etLat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp" />
+
+                <TextView
+                    android:id="@+id/etLng"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp" />
+
+                <TextView
+                    android:id="@+id/updated_on"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:textSize="10sp" />
+
+                <!--<TextView-->
+                    <!--android:id="@+id/tvId"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:hint="ID User"-->
+                    <!--android:layout_gravity="center_horizontal"-->
+                    <!--android:layout_marginTop="10dp" />-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="110dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center_horizontal"
+                                android:orientation="vertical">
+
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/btn_start_location_updates"
+                                        android:layout_centerHorizontal="true"
+                                        android:text="AMBIL LOKASI"
+                                        android:textColor="@color/lingkaran_lokasi"
+                                        android:textSize="14sp"
+                                        android:textStyle="bold" />
+
+                                    <Button
+                                        android:id="@+id/btn_start_location_updates"
+                                        style="?android:attr/progressBarStyleHorizontal"
+                                        android:layout_width="75dp"
+                                        android:layout_height="75dp"
+                                        android:layout_centerHorizontal="true"
+                                        android:background="@drawable/lingkaran_lokasi"
+                                        android:drawableTop="@drawable/ic_location"
+                                        android:indeterminate="false"
+                                        android:onClick="onclick"
+                                        android:padding="13dp"
+                                        android:textStyle="bold" />
+                                </RelativeLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center_horizontal"
+                                android:orientation="vertical">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/btnScan"
+                                        android:layout_centerHorizontal="true"
+                                        android:text="SCAN BARCODE"
+                                        android:textColor="@color/lingkaran_scan"
+                                        android:textSize="14sp"
+                                        android:textStyle="bold" />
+
+                                    <Button
+                                        android:id="@+id/btnScan"
+                                        style="?android:attr/progressBarStyleHorizontal"
+                                        android:layout_width="75dp"
+                                        android:layout_height="75dp"
+                                        android:layout_centerHorizontal="true"
+                                        android:background="@drawable/lingkaran_scan"
+                                        android:drawableTop="@drawable/ic_scan"
+                                        android:indeterminate="false"
+                                        android:padding="16dp"
+                                        android:textStyle="bold" />
+                                </RelativeLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_horizontal"
+                                android:orientation="vertical">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/btnSave"
+                                        android:layout_centerHorizontal="true"
+                                        android:text="SIMPAN"
+                                        android:textColor="@color/lingkaran_simpan"
+                                        android:textSize="14sp"
+                                        android:textStyle="bold" />
+
+                                    <Button
+                                        android:id="@+id/btnSave"
+                                        style="?android:attr/progressBarStyleHorizontal"
+                                        android:layout_width="75dp"
+                                        android:layout_height="75dp"
+                                        android:layout_centerHorizontal="true"
+                                        android:background="@drawable/lingkaran_simpan"
+                                        android:drawableTop="@drawable/ic_simpan"
+                                        android:enabled="false"
+                                        android:indeterminate="false"
+                                        android:onClick="onClick"
+                                        android:padding="16dp"
+                                        android:textStyle="bold" />
+
+                                </RelativeLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+    </LinearLayout>
+
+</LinearLayout>
